@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class="ri-map-pin-2-fill"></i>
+            <input type="text" placeholder="Search...">
+            <button id="search-button" class="ri-search-line"></button>
+        </div>
+
+        <div class="not-found">
+            <img src="/images/404.png">
+            <p>Opps! Invalid Location.</p>
+        </div>
+
+        <div class="weather-box">
+            <img src="">
+            <p class="temperature"></p>
+            <p class="description"></p>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class="ri-drop-fill"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class="ri-windy-fill"></i>
+                <div class="text">
+                    <span></span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
