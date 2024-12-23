@@ -1,0 +1,68 @@
+body {
+    background: pink;
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+}
+
+.app {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    gap: 40px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.parent {
+    /* position: relative; */
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+
+.note {
+    /* position: absolute; */
+    padding: 17px;
+    border-radius: 15px;
+    resize: none;
+    /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); */
+    font-size: 18px;
+    color: deeppink;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-sizing: border-box;
+    height: 200px;
+    scrollbar-width: none;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button > .delete {
+    padding: 10px 90px;
+    margin: 3px 0px 5px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+.btn {
+    height: 250px;
+    width: 250px;
+    border-color: rgba(255, 255, 255, 0.37);
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 15px;
+    font-size: 70px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

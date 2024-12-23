@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Note App</h2>
+    <p>Create your To Do List here</p>
+
+    <div class="app">
+        <!-- <div class="parent">
+            <textarea class="note" placeholder="Empty Note"></textarea>
+
+            <div class="button">
+                <button class="delete">Delete</button>
+            </div>
+        </div> -->
+
+        <div class="btn" id="btn">+</div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addBtn = document.getElementById("btn");
+            const app = document.querySelector(".app");
+
+            // Function to create a new note
+            function createNote() {
+                const parentDiv = document.createElement("div");
+                parentDiv.className = "parent";
+
+                const textarea = document.createElement("textarea");
+                textarea.className = "note";
+                textarea.placeholder = "Empty Note";
+
+                const buttonDiv = document.createElement("div");
+                buttonDiv.className = "button";
+
+                const deleteBtn = document.createElement("button");
+                deleteBtn.className = "delete";
+                deleteBtn.textContent = "Delete";
+
+                // Append the textarea and button to the parent div
+                buttonDiv.appendChild(deleteBtn);
+                parentDiv.appendChild(textarea);
+                parentDiv.appendChild(buttonDiv);
+
+                // Add the parent div to the app container
+                app.insertBefore(parentDiv, addBtn);
+
+                // Add event listener to the delete button
+                deleteBtn.addEventListener("click", function () {
+                    app.removeChild(parentDiv);
+                });
+            }
+
+            // Event listener for the add button
+            addBtn.addEventListener("click", createNote);
+        });
+
+    </script>
+</body>
+</html>
